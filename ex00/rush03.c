@@ -1,30 +1,43 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rush03.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/14 14:28:17 by marvin            #+#    #+#             */
+/*   Updated: 2025/09/14 15:40:00 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putchar(char c);
+void	ft_putchar(char c);
 
-void rush(int x, int y)
+void	rush(int x, int y)
 {
-    int row;
-    int col;
+	int	row;
+	int	col;
 
-    if (x <= 0 || y <= 0)
-        return;
-
-    for (row = 0; row < y; row++)
-    {
-        for (col = 0; col < x; col++)
-        {
-            if ((row == 0 && col == 0) || (row == y - 1 && col == 0))
-                ft_putchar('A');
-            else if ((row == 0 && col == x - 1) || (row == y - 1 && col == x - 1))
-                ft_putchar('C');
-            else if (row == 0 || row == y - 1)
-                ft_putchar('B');
-            else if (col == 0 || col == x - 1)
-                ft_putchar('B');
-            else
-                ft_putchar(' ');
-        }
-        ft_putchar('\n');
-    }
+	if (x <= 0 || y <= 0)
+		return ;
+	row = 0;
+	while (row < y)
+	{
+		col = 0;
+		while (col < x)
+		{
+			if ((row == 0 && col == 0) || (row == y - 1 && col == 0))
+				ft_putchar('A');
+			else if ((row == 0 && col == x - 1) || (row == y - 1 && col == x - 1))
+				ft_putchar('C');
+			else if (row == 0 || row == y - 1)
+				ft_putchar('B');
+			else if (col == 0 || col == x - 1)
+				ft_putchar('B');
+			else
+				ft_putchar(' ');
+			col++;
+		}
+		ft_putchar('\n');
+		row++;
+	}
 }
