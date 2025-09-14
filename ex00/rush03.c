@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rush03.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/14 18:58:24 by marvin            #+#    #+#             */
+/*   Updated: 2025/09/14 18:58:24 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	ft_putchar(char c);
+
 void	print_char(int row, int col, int x, int y)
 {
 	if ((row == 0 && col == 0) || (row == y - 1 && col == 0))
@@ -14,8 +28,8 @@ void	print_char(int row, int col, int x, int y)
 
 void	rush(int x, int y)
 {
-	int row;
-	int col;
+	int	row;
+	int	col;
 
 	if (x <= 0 || y <= 0)
 		return ;
